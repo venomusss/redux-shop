@@ -24,8 +24,9 @@ code {
 header {
     display: flex;
     flex-direction: row;
-    padding: 0 150px;
-    background: #f7aa35;color: #ffffff;
+    padding: 0 100px;
+    background: #f7aa35;
+    color: #ffffff;
     align-items: center;
     justify-content: space-between;
     height: 80px;
@@ -39,11 +40,13 @@ header {
     align-items: center;
     justify-content: space-between;
 }
-.logo{
+
+.logo {
     font-size: 28px;
     font-weight: 700;
 }
-.nav-link{
+
+.nav-link {
     color: #ffffff;
     font-size: 20px;
     text-decoration: none;
@@ -54,11 +57,11 @@ header {
     align-items: center;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #f1f1f1;
 }
 
-.dropdown-menu{
+.dropdown-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -66,16 +69,16 @@ header {
     height: 100%;
 }
 
-.dropdown-menu-content{
+.dropdown-menu-content {
     display: none;
     position: absolute;
     flex-direction: column;
-    top:80px;
-    background: rgba(255, 255, 255, 0.73);
+    top: 80px;
+    background: #ffffff;
     width: 200px;
 }
 
-.categories-link:hover ~ .dropdown-menu-content{
+.categories-link:hover ~ .dropdown-menu-content {
     display: flex;
 }
 
@@ -83,25 +86,183 @@ header {
     display: flex;
 }
 
-.category{
+.category {
     text-decoration: none;
     padding: 5px;
-    border:1px solid #f7aa35;
+    border: 1px solid #f7aa35;
     margin: 1px;
     color: #000000;
     text-transform: uppercase;
     font-weight: 500;
     transition: .2s linear;
 }
-.category:hover{
+
+.category:hover {
     background: #f1f1f1;
+}
+
+
+/*ITEMPAGE*/
+
+.item-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 0 100px;
+}
+
+.main-text {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.main-image {
+    align-self: center;
+    max-width: 50%;
+    max-height: 80%;
+}
+
+.main-title {
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.description {
+    font-size: 20px;
+}
+
+.main-price {
+    font-size: 42px;
+    font-weight: 900;
+    color: #f7aa35;
+}
+
+.button-group {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-button {
+    height: 100%;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 900;
+    border: 5px solid #f7aa35;
+    border-radius: 15px;
+    background: #ffffff;
+    color: #f7aa35;
+    transition: .2s linear;
+    cursor: pointer;
+
+}
+
+.add-button:hover {
+    background: #f7aa35;
+    color: #ffffff;
+}
+
+.cart-checker {
+    color: #f7aa35;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.delete-button {
+    height: 100%;
+    padding: 0 20px;
+    font-size: 20px;
+    font-weight: 900;
+    border: 5px solid #f73535;
+    border-radius: 15px;
+    background: #ffffff;
+    color: #f73535;
+    transition: .2s linear;
+    cursor: pointer;
+
+}
+
+.delete-button:hover {
+    background: #f73535;
+    color: #ffffff;
 }
 
 /*LIST*/
 
-.list-title{
+.list-title {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align:center;
+    text-align: center;
+    margin: 20px;
 }
+
+.list {
+    padding: 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*ITEM*/
+
+.item {
+    width: 24%;
+    margin: 0.5%;
+    box-sizing: border-box;
+    height: 400px;
+    border-radius: 15px;
+    border: 2px solid rgba(247, 170, 53, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition:.05s linear;
+}
+
+.item:hover{
+    border: 2px solid rgb(247, 170, 53);
+}
+
+
+.image-container {
+    height: 60%;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-image {
+    width: 55%;
+    max-height: 100%;
+}
+
+.item-text {
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    text-align: start;
+}
+
+.item-price{
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+    text-decoration: none;
+}
+
+.item-title{
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+

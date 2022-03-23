@@ -4,12 +4,14 @@ import Header from "./Components/Header";
 import List from "./Components/List";
 import ItemPage from "./Components/ItemPage";
 import CategoryList from "./Components/CategoryList";
-import Cart from "./Components/Cart";
+import {useSelector} from "react-redux";
 
 function App() {
     const [allProducts, setAllProducts] = useState([]);
     const [categories, setCategories] = useState([]);
     const [categoryList, setCategoryList] = useState([]);
+
+    const items = useSelector(state => state.items.items);
 
     async function getAllProducts() {
         const data = await fetch('https://fakestoreapi.com/products')
@@ -44,7 +46,7 @@ function App() {
                     <Route path={'/'} index element={<List name='All products' items={allProducts}/>}/>
                     <Route path={'/item/:id'} element={<ItemPage/>}/>
                     <Route path={'/category/:category'} element={<CategoryList items={categoryList} getCategoryList={getCategoryList}/>}/>
-                    <Route path={'/cart'} element={<List/>}/>
+                    <Route path={'/cart'} element={<List name='Cart' items={items}/>}/>
                 </Route>
             </Routes>
         </div>

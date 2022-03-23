@@ -1,8 +1,10 @@
 import React from 'react';
 import {NavLink, Outlet} from "react-router-dom";
+import {useSelector} from "react-redux";
 
 
 function Header({categories}) {
+    let items = useSelector(state => state.items.items)
     return (
         <div>
             <header>
@@ -19,7 +21,7 @@ function Header({categories}) {
                             )}
                         </div>
                     </div>
-                    <NavLink className='nav-link' to={'/cart'}>Cart</NavLink>
+                    <NavLink className='nav-link' to={'/cart'}>Cart({items.length})</NavLink>
                 </nav>
             </header>
             <Outlet/>
