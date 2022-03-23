@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useNavigate, useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {ADD_ITEM, REMOVE_ITEM} from "../store/cartReducer";
 
@@ -10,7 +10,6 @@ function ItemPage(props) {
     const dispatch = useDispatch();
     const items = useSelector(state => state.items.items);
     const cartChecker = items.filter(item => item.id === itemData.id).length;
-    let navigate = useNavigate();
 
     function addItem(itemData) {
         const item = {
@@ -25,7 +24,6 @@ function ItemPage(props) {
 
     function removeItem(id) {
         dispatch({type: REMOVE_ITEM, payload: id});
-        // navigate(`/cart`)
     }
 
     return (

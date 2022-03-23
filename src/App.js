@@ -5,6 +5,13 @@ import List from "./Components/List";
 import ItemPage from "./Components/ItemPage";
 import CategoryList from "./Components/CategoryList";
 import {useSelector} from "react-redux";
+import * as PropTypes from "prop-types";
+import Cart from './Components/Cart'
+
+Cart.propTypes = {
+    items: PropTypes.any,
+    name: PropTypes.string
+};
 
 function App() {
     const [allProducts, setAllProducts] = useState([]);
@@ -46,7 +53,7 @@ function App() {
                     <Route path={'/'} index element={<List name='All products' items={allProducts}/>}/>
                     <Route path={'/item/:id'} element={<ItemPage/>}/>
                     <Route path={'/category/:category'} element={<CategoryList items={categoryList} getCategoryList={getCategoryList}/>}/>
-                    <Route path={'/cart'} element={<List name='Cart' items={items}/>}/>
+                    <Route path={'/cart'} element={<Cart name='Cart' items={items}/>}/>
                 </Route>
             </Routes>
         </div>

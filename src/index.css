@@ -205,6 +205,7 @@ header {
     padding: 0 100px;
     display: flex;
     flex-wrap: wrap;
+    min-height: 60vh;
 }
 
 /*ITEM*/
@@ -264,5 +265,20 @@ header {
     font-size: 20px;
     color: #000000;
     font-weight: 600;
+}
+
+.sum{
+    margin: 0px 100px 30px 100px;
+    font-weight: 700;
+    padding-top: 30px;
+    font-size: 24px;
+    border-top: 1px solid #f7aa35;
+    text-align: center;
+}
+
+.sum span{
+    color: #f7aa35;
+    font-weight: 900;
+    font-size: 26px;
 }
 
