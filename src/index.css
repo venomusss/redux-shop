@@ -107,7 +107,7 @@ header {
 .item-page {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 100px;
 }
 
@@ -221,10 +221,10 @@ header {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    transition:.05s linear;
+    transition: .05s linear;
 }
 
-.item:hover{
+.item:hover {
     border: 2px solid rgb(247, 170, 53);
 }
 
@@ -249,7 +249,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    justify-content: space-around   ;
+    justify-content: space-around;
     box-sizing: border-box;
     text-align: start;
     background: #f1f1f1;
@@ -258,22 +258,22 @@ header {
     transition: .05s linear;
 }
 
-.item-price{
+.item-price {
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
     text-decoration: none;
 }
 
-.item-title{
+.item-title {
     font-size: 20px;
     font-weight: 600;
     height: 100%;
     overflow: hidden;
 }
 
-.sum{
-    margin: 0px 100px 30px 100px;
+.sum {
+    margin: 20px 100px 30px 100px;
     font-weight: 700;
     padding-top: 30px;
     font-size: 24px;
@@ -281,13 +281,182 @@ header {
     text-align: center;
 }
 
-.sum span{
+.sum span {
     color: #f7aa35;
     font-weight: 900;
     font-size: 26px;
 }
 
-.item:hover .item-text{
+.item:hover .item-text {
     color: #f7aa35;
     padding: 21px;
+}
+
+/*ADAPTATION*/
+
+@media only screen and (max-width: 1300px) {
+    .item {
+        width: 32.33333333%;
+    }
+
+    .category {
+        font-size: 20px;
+    }
+
+    .item-page {
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .item {
+        width: 49%;
+    }
+
+    .list {
+        padding: 0 50px;
+    }
+
+    .nav {
+        width: 60%;
+    }
+
+    .sum {
+        font-size: 26px;
+        margin: 20px 50px;
+    }
+
+    .sum span {
+        font-size: 28px;
+    }
+
+    .item-title {
+        font-size: 16px;
+    }
+
+    .item-price {
+        font-size: 18px;
+    }
+
+    .item-page {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .main-image {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    .main-text {
+        height: 50%;
+        padding: 20px;
+    }
+
+    .description {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .main-price {
+        padding: 10px;
+    }
+
+    .add-button {
+        font-size: 26px;
+        max-height: 110px;
+    }
+
+    .delete-button {
+        font-size: 24px;
+        min-height: 80px;
+        max-height: 110px;
+        margin: 10px;
+    }
+
+    .button-group {
+        padding: 10px;
+        margin:20px;
+        height: 30vh;
+    }
+
+    .cart-checker {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .list {
+        padding: 0 20px;
+    }
+    .sum{
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .item {
+        width: 100%;
+        height: 80vh;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0 15px;
+        height: 100px;
+    }
+
+    .dropdown-menu-content {
+        top: 60px;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .list {
+        padding: 0 10px;
+    }
+
+    .item-title {
+        font-size: 30px;
+    }
+
+    .item-price {
+        font-size: 32px;
+    }
+
+    .button-group {
+        min-height: 20vh;
+        flex-direction: column;
+    }
+
+    .cart-checker {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .main-title{
+        font-size: 36px;
+    }
+    .description{
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    .main-image{
+        max-width: 100%;
+        height: auto;
+    }
+    .sum{
+        margin: 10px;
+        font-size: 24px;
+    }
+    .sum span{
+        font-size: 26px;
+    }
 }
