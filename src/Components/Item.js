@@ -9,7 +9,12 @@ function Item({key, item}) {
                 </div>
                 <div className='item-text'>
                     <div className='item-price'>{item.price} UAH</div>
-                    <div className='item-title'>{item.title}</div>
+                    {item.title.length>55 ?
+                    <div className='item-title'>{item.title.substr(0, 55)}...</div>
+                        :
+                        <div className='item-title'>{item.title}</div>
+                    }
+
                 </div>
             </NavLink>
 );

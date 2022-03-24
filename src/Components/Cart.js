@@ -11,7 +11,7 @@ function Cart({name, items}) {
     return (
         <div className='cart'>
             <List name={name} items={items}/>
-            <div className='sum'>The price of products in the basket is: <span>{sum} UAH</span></div>
+            <div className='sum'>The price of products in the basket is: <span>{sum.toFixed(2)} UAH</span></div>
         </div>
     );
 }

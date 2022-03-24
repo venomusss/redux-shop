@@ -8,7 +8,7 @@ function Header({categories}) {
     return (
         <div>
             <header>
-                <div className='logo'>STORE</div>
+                <div className='logo'>FORK</div>
                 <nav className='nav'>
                     <NavLink className='nav-link' to={'/'}>Home</NavLink>
                     <div className='dropdown-menu'>
